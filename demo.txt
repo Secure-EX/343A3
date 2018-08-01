@@ -1,0 +1,186 @@
+b2210-22:~$ ssh xieruiyu@dbsrv1.teach.cs.toronto.edu
+    Type "faq" to view FAQ, and "rules" to view usage policy.
+    Report system problems by sending email to <admin@teach.cs.toronto.edu>.
+
+The Teaching Labs are: BA2200 BA2210 BA2220 BA2240 BA2270 BA3175 BA3185 BA3195 BA3200
+
+This is a shared Linux system. By using this system, you acknowledge that
+some information about your computer account (e.g. login name, process data,
+etc.) will be available to other users sharing this system, in ways 
+typical of shared Linux systems.  
+
+Last login: Wed Mar 28 18:12:56 2018 from b2210-22.teach.cs.toronto.edu
+dbsrv1:~$ cd CSC343/A3                            
+dbsrv1:~/CSC343/A3$ psql csc343h-xieruiyu                   
+psql (9.5.12)
+Type "help" for help.
+
+csc343h-xieruiyu=> \i runner.txt    
+-- Loading schema and data:
+psql:schema.ddl:6: NOTICE:  drop cascades to 27 other objects
+DETAIL:  drop cascades to table carschema.customer
+drop cascades to table carschema.model
+drop cascades to table carschema.rentalstation
+drop cascades to table carschema.car
+drop cascades to type carschema.status_type
+drop cascades to table carschema.reservation
+drop cascades to table carschema.customer_reservation
+drop cascades to table carschema.q2
+drop cascades to table carschema.q3
+drop cascades to view carschema.all_fit_cars_with_frequency
+drop cascades to table carschema.q4
+drop cascades to view carschema.res_info_with_right_age
+drop cascades to view carschema.have_changed
+drop cascades to view carschema.have_changed_with_diff
+drop cascades to table carschema.q1
+drop cascades to view carschema.all_cancelled
+drop cascades to view carschema.rescheduled
+drop cascades to view carschema.absolutely_cancelled
+drop cascades to view carschema.absolutely_reservations
+drop cascades to view carschema.count_cancel
+drop cascades to view carschema.count_reservation                                                      
+drop cascades to view carschema.cancel_res_cast_zero                                                   
+drop cascades to view carschema.res_cast_zero
+drop cascades to view carschema.union_cancel
+drop cascades to view carschema.union_reservation
+drop cascades to view carschema.final_table
+drop cascades to view carschema.answer
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TYPE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 15
+INSERT 0 8
+INSERT 0 9
+INSERT 0 28
+INSERT 0 38
+INSERT 0 46
+-- Query 1:
+SET
+psql:q1.sql:2: NOTICE:  table "q1" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q1.sql:56: NOTICE:  view "all_cancelled" does not exist, skipping
+DROP VIEW
+psql:q1.sql:57: NOTICE:  view "rescheduled" does not exist, skipping
+DROP VIEW
+psql:q1.sql:58: NOTICE:  view "absolutely_cancelled" does not exist, skipping
+DROP VIEW
+psql:q1.sql:59: NOTICE:  view "absolutely_reservations" does not exist, skipping
+DROP VIEW
+psql:q1.sql:60: NOTICE:  view "count_cancel" does not exist, skipping
+DROP VIEW
+psql:q1.sql:61: NOTICE:  view "count_reservation" does not exist, skipping
+DROP VIEW
+psql:q1.sql:62: NOTICE:  view "cancel_res_cast_zero" does not exist, skipping
+DROP VIEW
+psql:q1.sql:63: NOTICE:  view "res_cast_zero" does not exist, skipping
+DROP VIEW
+psql:q1.sql:64: NOTICE:  view "union_cancel" does not exist, skipping
+DROP VIEW
+psql:q1.sql:65: NOTICE:  view "union_reservation" does not exist, skipping
+DROP VIEW
+psql:q1.sql:66: NOTICE:  view "final_table" does not exist, skipping
+DROP VIEW
+psql:q1.sql:67: NOTICE:  view "answer" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 2
+      name      |       email       | ratio 
+----------------+-------------------+-------
+ Jonah Swartz   | jj.swtz@mail.com  |     1
+ Malik Abdullah | malik_aa@mail.com |   0.5
+(2 rows)
+
+-- Query 2:
+SET
+psql:q2.sql:3: NOTICE:  table "q2" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q2.sql:57: NOTICE:  drop cascades to 5 other objects
+DETAIL:  drop cascades to view count_reservation
+drop cascades to view res_cast_zero
+drop cascades to view union_reservation
+drop cascades to view final_table
+drop cascades to view answer
+DROP VIEW
+psql:q2.sql:58: NOTICE:  view "book_only_once" does not exist, skipping
+DROP VIEW
+psql:q2.sql:59: NOTICE:  view "count_book_only_once_cus" does not exist, skipping
+DROP VIEW
+psql:q2.sql:60: NOTICE:  view "all_reservation_time_per_cus" does not exist, skipping
+DROP VIEW
+psql:q2.sql:61: NOTICE:  view "full_count_only_once_table" does not exist, skipping
+DROP VIEW
+psql:q2.sql:62: NOTICE:  view "partial_full_table" does not exist, skipping
+DROP VIEW
+psql:q2.sql:63: NOTICE:  view "answer" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 2
+     email      | num_shared_reservations 
+----------------+-------------------------
+ a.n@mail.com   |                       1
+ cyngu@mail.com |                       1
+(2 rows)
+
+-- Query 3:
+SET
+psql:q3.sql:2: NOTICE:  table "q3" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q3.sql:19: NOTICE:  view "all_fit_cars_with_frequency" does not exist, skipping
+DROP VIEW
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 1
+ model_name 
+------------
+ BMW X5
+(1 row)
+
+-- Query 4:
+SET
+psql:q4.sql:2: NOTICE:  table "q4" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q4.sql:24: NOTICE:  view "res_info_with_right_age" does not exist, skipping
+DROP VIEW
+psql:q4.sql:25: NOTICE:  view "have_changed" does not exist, skipping
+DROP VIEW
+psql:q4.sql:26: NOTICE:  view "have_changed_with_diff" does not exist, skipping
+DROP VIEW
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 1
+   customer_email   
+--------------------
+ s.hilbert@mail.com
+(1 row)
